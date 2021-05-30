@@ -1,7 +1,7 @@
 const {Client , MessageEmbed} = require("discord.js");
 const client = new Client();
-const token = 'ODA1MzM5NzgyNjI0MzEzMzg0.YBZdHg.DEb-ZqS4VYhC2YVqLo_BfcON__0'
-var starwars = require('starwars');
+const token = ''
+const starwars = require('starwars');
 
 client.on("ready" , ()=>{
     console.log(`Logged in as ${client.user.tag}`);
