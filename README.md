@@ -1,4 +1,4 @@
-# R2-D2 DISCORD BOT !                     [R2-D2](https://i.imgur.com/7Mb8CAT.png)
+# R2-D2 DISCORD BOT                         ![R2-D2](https://i.imgur.com/7Mb8CAT.png)
 ## This is a simple discord bot made using [discord.js](https://discord.js.org/#/) .
 #
 
