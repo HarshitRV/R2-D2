@@ -27,5 +27,5 @@ Currently it can do only few things and is under devlopment.
 ## Invite the live version of the bot
 
 [Click here to Invite](https://discord.com/oauth2/authorize?client_id=854977056022331423&permissions=8&scope=bot)
-
+![R2-D2](https://i.imgur.com/7Mb8CAT.png)
   
