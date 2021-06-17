@@ -3,7 +3,7 @@
 #
 
 # Description
-Currently it can do only few things and is under devlopment.
+The star wars themed bot + has music functionaliy.
 
 ## Bot Commands
 
