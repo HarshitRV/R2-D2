@@ -1,6 +1,6 @@
 const {Client , MessageEmbed} = require("discord.js");
 const client = new Client();
-const token = 'ODA1MzM5NzgyNjI0MzEzMzg0.YBZdHg.F8IyJ2saglzdYVHGaQay1_lD_2w'
+const token = ''
 const starwars = require('starwars');
 const https = require("https");
 
@@ -20,7 +20,8 @@ client.on('message',msg =>{
     if(msg.content === '.quote'){
         const embed = new MessageEmbed()
         .setColor(0x0949EE)
-        .setDescription(starwars());
+        .setDescription(starwars())
+        .setTimestamp()
         msg.channel.send(embed);
     }
 
@@ -82,6 +83,7 @@ client.on('message',msg =>{
         .setTitle(member)
         .setColor(0x0949EE)
         .setImage(msg.author.displayAvatarURL())
+        .setTimestamp()
         msg.channel.send(embed);
     }
     //MEME
@@ -118,11 +120,12 @@ client.on('message',msg =>{
     }
     if(msg.content.startsWith(".help")){
         const embed = new MessageEmbed()
-        .setAuthor("R2-D2™-Help" , "https://i.imgur.com/7Mb8CAT.png")
+        .setAuthor("R2-D2™|Help" , "https://i.imgur.com/7Mb8CAT.png")
         .setTitle("Commands")
-        .setDescription("**__Prefix__** : `.`\n\n**Fun Commands**\n\n`.quote    :`Generates random star wars quote\n`.meme     :`Generates random meme\n`.joke     :`Generates random jokes\n\n**Mod Commands**\n\n`.ping     :`Pings the bot\n`.kick     :`Kicks the mentioned user\n`.ban      :`Bans the mentioned user\n`.av       :`Shows avatar of mentioned user")
+        .setDescription("**__Prefix__** : `.`\n\n**Fun Commands**\n\n`.quote    :`Generates random star wars quote\n`.meme     :`Generates random meme\n`.joke     :`Generates random jokes\n\n**Mod Commands**\n\n`.ping     :`Pings the bot\n`.kick     :`Kicks the mentioned user\n`.ban      :`Bans the mentioned user\n`.av       :`Shows avatar of mentioned user\n\n[Invite Me](https://discord.com/api/oauth2/authorize?client_id=854977056022331423&permissions=8&scope=bot) | [GitHub](https://github.com/lucifer00911/R2-D2)")
         .setColor(0x0949EE)
         .setTimestamp()
+        .setFooter("Dev | WOLVERINE911#3940","https://i.imgur.com/I6lsh5r.jpg")
         msg.channel.send(embed);
     }
 });
