@@ -1,7 +1,8 @@
 const {Client , MessageEmbed} = require("discord.js");
 const client = new Client();
-const token = ''
+const token = 'ODA1MzM5NzgyNjI0MzEzMzg0.YBZdHg.F8IyJ2saglzdYVHGaQay1_lD_2w'
 const starwars = require('starwars');
+const https = require("https");
 
 client.on("ready" , ()=>{
     console.log(`Logged in as ${client.user.tag}`);
@@ -83,7 +84,47 @@ client.on('message',msg =>{
         .setImage(msg.author.displayAvatarURL())
         msg.channel.send(embed);
     }
-
+    //MEME
+    if(msg.content.startsWith(".meme")){
+        const url = "https://meme-api.herokuapp.com/gimme"
+        https.get(url , (res)=>{
+          res.on("data",(data)=>{
+            const meme = JSON.parse(data)
+            //console.log(meme)
+            const embed = new MessageEmbed()
+            .setDescription(`[Meme Link](${meme.postLink})`)
+            .setAuthor(meme.author)
+            .setColor(0x0949EE)
+            .setImage(meme.url)
+            .setFooter('👍'+meme.ups)
+            .setTimestamp()
+            msg.channel.send(embed);
+          })
+        })
+    }
+    if(msg.content.startsWith(".joke")){
+        const url = "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit"
+        https.get(url , (res)=>{
+          res.on("data",(data)=>{
+            const joke = JSON.parse(data)
+            //console.log(joke);
+            const embed = new MessageEmbed()
+            .setDescription(`**${joke.setup}**\n\n${joke.delivery}`)
+            .setColor(0x0949EE)
+            .setTimestamp()
+            msg.channel.send(embed);
+        })
+      })
+    }
+    if(msg.content.startsWith(".help")){
+        const embed = new MessageEmbed()
+        .setAuthor("R2-D2™-Help" , "https://i.imgur.com/7Mb8CAT.png")
+        .setTitle("Commands")
+        .setDescription("**__Prefix__** : `.`\n\n**Fun Commands**\n\n`.quote    :`Generates random star wars quote\n`.meme     :`Generates random meme\n`.joke     :`Generates random jokes\n\n**Mod Commands**\n\n`.ping     :`Pings the bot\n`.kick     :`Kicks the mentioned user\n`.ban      :`Bans the mentioned user\n`.av       :`Shows avatar of mentioned user")
+        .setColor(0x0949EE)
+        .setTimestamp()
+        msg.channel.send(embed);
+    }
 });
 
 
