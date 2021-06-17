@@ -21,7 +21,7 @@ The star wars themed bot + has music functionaliy.
 | `.meme`      | `FUN` | Random Meme |
 | `.quote`      | `FUN` | Random Quote |
 | `.joke`      | `FUN` | Randome Joke |
-
+| `.music`      | `FUN` | Open Music Panel |
 
 
 ## Invite the live version of the bot
