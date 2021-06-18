@@ -39,7 +39,8 @@ volume <1 - 100>, change the volume.
 skip, skip to next music.
 stop, stop all music.
 filter <filter>, add / remove filter.
-w-filters, see filters.```
+w-filters, see filters.
+```
 
 
 ## Invite the live version of the bot
