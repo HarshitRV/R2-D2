@@ -26,7 +26,7 @@ Using the [ZerioDev](https://github.com/ZerioDev/Music-bot) repo for Music funct
 
 
 ## 🎵 Music commands
-`play <name/URL>, play music in a voice channel.
+```play <name/URL>, play music in a voice channel.
 search <name>, open a panel to choose a music and then play it.
 pause, pause the current music.
 resume, puts the current music back on.
@@ -39,7 +39,7 @@ volume <1 - 100>, change the volume.
 skip, skip to next music.
 stop, stop all music.
 filter <filter>, add / remove filter.
-w-filters, see filters.`
+w-filters, see filters.```
 
 
 ## Invite the live version of the bot
