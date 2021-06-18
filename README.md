@@ -25,7 +25,7 @@ The star wars themed bot + has music functionaliy.
 
 
 ## Invite the live version of the bot
-(Click to Invite)[https://discord.com/api/oauth2/authorize?client_id=854977056022331423&permissions=8&scope=bot]
+[Click to Invite](https://discord.com/api/oauth2/authorize?client_id=854977056022331423&permissions=8&scope=bot)
 
 
   
