@@ -4,6 +4,7 @@
 
 # Description
 The star wars themed bot + has music functionaliy.
+Using the [ZerioDev](https://github.com/ZerioDev/Music-bot) repo for Music functionality .
 
 ## Bot Commands
 
