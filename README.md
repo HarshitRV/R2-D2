@@ -8,39 +8,40 @@ Using the [ZerioDev](https://github.com/ZerioDev/Music-bot) repo for Music funct
 
 ## Bot Commands
 
-#### Prefix  :   `.`
+## Prefix  :   `.`
 
-#### List of Commands
+## List of Commands
 
 
-| Commands| Command Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `.ping`      | `MOD` | Pings the bot |
-| `.kick`      | `MOD` | Kicks the mentioned user |
-| `.ban`      | `MOD` | Bans the mentioned user|
-| `.av`      | `MOD` | Shows pfp of the mentioned user |
-| `.meme`      | `FUN` | Random Meme |
-| `.quote`      | `FUN` | Random Quote |
-| `.joke`      | `FUN` | Randome Joke |
-| `.music`      | `FUN` | Open Music Panel |
+| Commands  | Command Type     | Description                            |
+| :-------- | :----------------| :--------------------------------------|
+| `.ping`   | `MOD`            | Pings the bot                          |
+| `.kick`   | `MOD`            | Kicks the mentioned user               |
+| `.ban`    | `MOD`            | Bans the mentioned user                |
+| `.av`     | `MOD`            | Shows pfp of the mentioned user        |
+| `.meme`   | `FUN`            | Random Meme                            |
+| `.quote`  | `FUN`            | Random Quote                           |
+| `.joke`   | `FUN`            | Randome Joke                           |
+| `.music`  | `FUN`            | Open Music Panel                       |
+| `.sarcasm`| `FUN`            | Random Chandler Bing sarcastic comment |
 
 
 ## 🎵 Music commands
-```play <name/URL>, play music in a voice channel.
-search <name>, open a panel to choose a music and then play it.
-pause, pause the current music.
-resume, puts the current music back on.
-queue, see the next songs.
-clear-queue, remove music in the queue.
-shuffle, to mix the queue.
-nowplaying, see music in progress.
-loop, to enable or disable the repeat function.
-volume <1 - 100>, change the volume.
-skip, skip to next music.
-stop, stop all music.
-filter <filter>, add / remove filter.
-w-filters, see filters.
-```
+| Commands              | Description                                      |
+| :---------------------| :------------------------------------------------|
+| `.play <name/URL>`    | Plays music in a voice channel                   |
+| `.search <name>`      | Open a panel to choose a music and then play it. |
+| `.pause`              | Pause the current music                          |
+| `.resume`             | Resumes the current music back on                |
+| `.queue`              | See the next songs                               |
+| `.clear-queue`        | Remove music in the queue                        | 
+| `.shuffle`            | Mixes the queue                                  |
+| `.loop`               | To enable or disable the repeat function         |
+| `.volume <1 - 100>`   | Change the volume                                |
+| `.skip`               | Skip to next music                               |
+| `.stop`               | Stop all music                                   |
+| `.filter <filter>`    | Add / remove filter                              |
+| `.w-filters`          | See filters                                      |
 
 
 ## Invite the live version of the bot
