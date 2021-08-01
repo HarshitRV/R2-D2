@@ -3,8 +3,7 @@
 #
 
 # Description
-The star wars themed bot + has music functionaliy.
-Using the [ZerioDev](https://github.com/ZerioDev/Music-bot) repo for Music functionality .
+The star wars themed discord bot.
 
 ## Bot Commands
 
@@ -22,11 +21,10 @@ Using the [ZerioDev](https://github.com/ZerioDev/Music-bot) repo for Music funct
 | `.meme`   | `FUN`            | Random Meme                            |
 | `.quote`  | `FUN`            | Random Quote                           |
 | `.joke`   | `FUN`            | Randome Joke                           |
-| `.music`  | `FUN`            | Open Music Panel                       |
 | `.sarcasm`| `FUN`            | Random Chandler Bing sarcastic comment |
 
 
-## 🎵 Music commands
+<!-- ## 🎵 Music commands
 | Commands              | Description                                      |
 | :---------------------| :------------------------------------------------|
 | `.play <name/URL>`    | Plays music in a voice channel                   |
@@ -41,7 +39,7 @@ Using the [ZerioDev](https://github.com/ZerioDev/Music-bot) repo for Music funct
 | `.skip`               | Skip to next music                               |
 | `.stop`               | Stop all music                                   |
 | `.filter <filter>`    | Add / remove filter                              |
-| `.w-filters`          | See filters                                      |
+| `.w-filters`          | See filters                                      | -->
 
 
 ## Invite the live version of the bot
