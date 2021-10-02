@@ -117,7 +117,7 @@ client.on('message',msg =>{
     }
       //CHANDLER BING SARCASTIC COMMENTS
     if(msg.content.startsWith(`${prefix}sarcasm`)){
-      const url = "https://pacific-garden-82759.herokuapp.com/sarcasm";
+      const url = "https://sarcasm-api.herokuapp.com/sarcasm";
       https.get(url , (res)=>{
           res.on("data",(data)=>{
             const sarcasm = JSON.parse(data)
