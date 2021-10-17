@@ -2,6 +2,7 @@
 TOKEN.txt
 starwars.js
 test.js
+.env
 
 # Logs
 logs
