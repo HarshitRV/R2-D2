@@ -1,5 +1,5 @@
 # R2-D2 DISCORD BOT                         
-<img src="https://i.imgur.com/7Mb8CAT.png" style="text-align: center;")>
+<img src="https://i.imgur.com/7Mb8CAT.png" style="text-align: center;">
 ## This is a simple discord bot with music functionality made using [discord.js](https://discord.js.org/#/) .
 #
 
