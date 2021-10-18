@@ -95,7 +95,6 @@ client.on('message', msg => {
     https.get(url, (res) => {
       res.on("data", (data) => {
         const meme = JSON.parse(data)
-        //console.log(meme)
         const embed = new MessageEmbed()
           .setDescription(`[Meme Link](${meme.postLink})`)
           .setAuthor(meme.author)
@@ -103,22 +102,6 @@ client.on('message', msg => {
           .setImage(meme.url)
           .setFooter('👍' + meme.ups)
           .setTimestamp()
-        msg.channel.send(embed);
-      })
-    })
-  }
-  //joke
-  if (msg.content.startsWith(`${prefix}joke`)) {
-    const url = "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit"
-    https.get(url, (res) => {
-      res.on("data", (data) => {
-        const joke = JSON.parse(data)
-        //console.log(joke);
-        const embed = new MessageEmbed()
-          .setDescription(`**${joke.setup}**\n\n${joke.delivery}`)
-          .setColor(0x0949EE)
-          .setTimestamp()
-          .setFooter('Requested by ' + msg.author.username, msg.author.displayAvatarURL())
         msg.channel.send(embed);
       })
     })
