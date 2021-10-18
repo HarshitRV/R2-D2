@@ -24,7 +24,6 @@ Music functionality is made possible using
 | `.av`     | `MOD`            | Shows pfp of the mentioned user        |
 | `.meme`   | `FUN`            | Random Meme                            |
 | `.quote`  | `FUN`            | Random Quote                           |
-| `.joke`   | `FUN`            | Randome Joke                           |
 | `.sarcasm`| `FUN`            | Random Chandler Bing sarcastic comment |
 
 
