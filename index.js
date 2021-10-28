@@ -7,6 +7,9 @@ const client = new Client();
 const starwars = require('starwars');
 const https = require("https");
 // const keepAlive = require("./server")
+const NSFW = require("discord-nsfw");
+const nsfw = new NSFW();
+
 const prefix = ">"
 
 client.on("ready", () => {
@@ -105,6 +108,14 @@ client.on('message', msg => {
         msg.channel.send(embed);
       })
     })
+  }
+  if(msg.content.startsWith(`${prefix}nsfw`)){
+    const image = await nsfw.pussy;
+    const embed = new Discord.MessageEmbed()
+    .setTitle(`Pussy Image`)
+    .setColor(0x0949EE)
+    .setImage(image)
+    msg.channel.send(embed);
   }
   //CHANDLER BING SARCASTIC COMMENTS
   if (msg.content.startsWith(`${prefix}sarcasm`)) {
