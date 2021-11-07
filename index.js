@@ -7,7 +7,7 @@ const client = new Client();
 const starwars = require('starwars');
 const https = require("https");
 // const keepAlive = require("./server")
-const prefix = ">"
+let prefix = ">"
 
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}`);
@@ -28,6 +28,7 @@ client.on('message', msg => {
   if (msg.content === `${prefix}ping`) {
     msg.channel.send(`Pong! ${client.ws.ping}ms`)
   }
+  
   //MODERATION COMMANDS
   //kick
   if (msg.content.startsWith(`${prefix}kick`)) {
@@ -141,6 +142,19 @@ client.on('message', msg => {
         msg.channel.send(embed);
       })
     })
+  }
+  // CHANGE PREFIX
+  if (msg.content.startsWith(`${prefix}prefix`)) {
+    const newPrefix = args[1];
+    if (!newPrefix) {
+      msg.reply("You didn't specify a new prefix!");
+    } else {
+      client.user.setActivity(`${newPrefix}help`, {
+        type: "PLAYING"
+      });
+      prefix = newPrefix;
+      msg.reply(`Prefix changed to ${newPrefix}`);
+    }
   }
   //Print message
   if (msg.content.startsWith(`${prefix}print`)) {
