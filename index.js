@@ -7,7 +7,8 @@ const client = new Client();
 const starwars = require('starwars');
 const https = require("https");
 // const keepAlive = require("./server")
-let prefix = ">"
+// let prefix = ">"
+const prefix = ">"
 
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}`);
@@ -144,18 +145,18 @@ client.on('message', msg => {
     })
   }
   // CHANGE PREFIX
-  if (msg.content.startsWith(`${prefix}prefix`)) {
-    const newPrefix = args[1];
-    if (!newPrefix) {
-      msg.reply("You didn't specify a new prefix!");
-    } else {
-      client.user.setActivity(`${newPrefix}help`, {
-        type: "PLAYING"
-      });
-      prefix = newPrefix;
-      msg.reply(`Prefix changed to ${newPrefix}`);
-    }
-  }
+  // if (msg.content.startsWith(`${prefix}prefix`)) {
+  //   const newPrefix = args[1];
+  //   if (!newPrefix) {
+  //     msg.reply("You didn't specify a new prefix!");
+  //   } else {
+  //     client.user.setActivity(`${newPrefix}help`, {
+  //       type: "PLAYING"
+  //     });
+  //     prefix = newPrefix;
+  //     msg.reply(`Prefix changed to ${newPrefix}`);
+  //   }
+  // }
   //Print message
   if (msg.content.startsWith(`${prefix}print`)) {
     //  prefix =  args[0];
