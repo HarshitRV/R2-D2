@@ -3,7 +3,7 @@ const { Client, MessageEmbed } = require("discord.js");
 const client = new Client();
 const starwars = require("starwars");
 const https = require("https");
-// const keepAlive = require("./server")
+const keepAlive = require("./server")
 const prefix = ".";
 
 client.on("ready", () => {
@@ -326,5 +326,5 @@ client.on("message", (msg) => {
   }
 });
 
-// keepAlive();
+keepAlive();
 client.login(process.env.TOKEN);
