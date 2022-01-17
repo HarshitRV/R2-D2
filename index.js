@@ -3,7 +3,7 @@ const { Client, MessageEmbed } = require("discord.js");
 const client = new Client();
 const starwars = require("starwars");
 const https = require("https");
-const keepAlive = require("./server")
+const keepAlive = require("./server");
 const prefix = ".";
 
 client.on("ready", () => {
@@ -121,16 +121,12 @@ client.on("message", (msg) => {
   // }
   //CHANDLER BING SARCASTIC COMMENTS
   if (msg.content.startsWith(`${prefix}sarcasm`)) {
-    const url = "https://sarcasm-api.herokuapp.com/sarcasm";
+    const url = "https://sarcasm-api.herokuapp.com/";
     https.get(url, (res) => {
       res.on("data", (data) => {
-        const sarcasm = JSON.parse(data);
-        const sno = sarcasm.length;
-        const random = Math.floor(sno * Math.random());
-        const sarcasticComment = sarcasm[random].sarcasm;
-
+        const comment = JSON.parse(data);
         const embed = new MessageEmbed()
-          .setDescription(`**${sarcasticComment}**`)
+          .setDescription(`**${comment.sarcasm}**`)
           .setColor(0x0949ee)
           .setTimestamp()
           .setFooter("Chandler Bing", "https://imgur.com/NobKgPg.jpg");
@@ -180,7 +176,7 @@ client.on("message", (msg) => {
     to_send = args.join(" ");
     msg.channel.send(to_send);
   }
-  
+
   //General HELP
   if (msg.content.startsWith(`${prefix}help`)) {
     const embed = new MessageEmbed()
@@ -192,7 +188,10 @@ client.on("message", (msg) => {
           name: `🎶 ${prefix}music`,
           value: `Opens the music panel to play music.`,
         },
-        { name: `❛❜ ${prefix}starwars`, value: `Generates random starwars quote` },
+        {
+          name: `❛❜ ${prefix}starwars`,
+          value: `Generates random starwars quote`,
+        },
         { name: `😹 ${prefix}meme`, value: `Generates random meme` },
         {
           name: `😏 ${prefix}sarcasm`,
