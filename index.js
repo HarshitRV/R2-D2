@@ -180,6 +180,7 @@ client.on("message", (msg) => {
     to_send = args.join(" ");
     msg.channel.send(to_send);
   }
+  
   //General HELP
   if (msg.content.startsWith(`${prefix}help`)) {
     const embed = new MessageEmbed()
@@ -222,7 +223,7 @@ client.on("message", (msg) => {
         },
         {
           name: `\u200b`,
-          value: `**[GitHub](https://github.com/HarshitRV/R2-D2)**`,
+          value: `**[Support](https://discord.com/invite/9qtAg79ahW)**`,
           inline: true,
         }
       )

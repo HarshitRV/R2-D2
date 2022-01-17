@@ -16,16 +16,16 @@ Music functionality is made possible using
 ## List of Commands
 
 
-| Commands  | Command Type     | Description                            |
-| :-------- | :----------------| :--------------------------------------|
-| `.ping`   | `MOD`            | Pings the bot                          |
-| `.kick`   | `MOD`            | Kicks the mentioned user               |
-| `.ban`    | `MOD`            | Bans the mentioned user                |
-| `.av`     | `MOD`            | Shows pfp of the mentioned user        |
-| `.meme`   | `FUN`            | Random Meme                            |
-| `.quote`  | `FUN`            | Random Quote                           |
-| `.sarcasm`| `FUN`            | Random Chandler Bing sarcastic comment |
-
+| Commands   | Command Type     | Description                            |
+| :--------  | :----------------| :--------------------------------------|
+| `.ping`    | `MOD`            | Pings the bot                          |
+| `.kick`    | `MOD`            | Kicks the mentioned user               |
+| `.ban`     | `MOD`            | Bans the mentioned user                |
+| `.av`      | `MOD`            | Shows pfp of the mentioned user        |
+| `.meme`    | `FUN`            | Random Meme                            |
+| `.quote`   | `FUN`            | Random Fight Club Quote                |
+| `.sarcasm` | `FUN`            | Random Chandler Bing sarcastic comment |
+| `.starwars`| `FUN`            | Random star wars quote                 |
 
 ## 🎵 Music commands
 | Commands              | Description                                      |
