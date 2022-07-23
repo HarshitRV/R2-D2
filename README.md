@@ -18,21 +18,30 @@ Music functionality is made possible using
 | :----------------| :----------------| :------------------------------------------------------------------------|
 | `.r2d2`          | `FUN`            | Ask r2d2 anything (powered by[OpenAI](https://beta.openai.com/overview)  |
 | `.philosophy`    | `FUN`            | Get random Phil Dunphy's philosophy                                      |
-## List of Commands 📁
+# List of Commands 📁
+
+## General Commands 📚
+| Commands       | Command Type     | Description                           |
+| :--------------| :----------------| :-------------------------------------|
+| `.help`        | `HELP`           | Get all commands                      |
+| `.music`       | `FUB`            | Open music panel                      |
+| `.ping`        | `MOD`            | Pings the bot                         |
+| `.starwars`    | `MOD`            | Random starwars quote                 |
+| `.av`          | `MOD`            | Shows pfp of the mentioned user       |
+| `.meme`        | `FUN`            | Random Meme                           |
+| `.kanye`       | `FUN`            | Get kanye west random quote           |
+
+# Exclusive Commands 🔥
+| Commands       | Command Type     | Description                                                              |
+| :--------------| :----------------| :------------------------------------------------------------------------|
+| `.r2d2`        | `EXC`            | Ask r2d2 anything (powered by[OpenAI](https://beta.openai.com/overview)) |
+| `.fightclub`   | `EXC`            | Random Fight Club Quote                                                  |
+| `.sarcasm`     | `EXC`            | Random Chandler Bing sarcastic comment                                   |
+| `.philosophy`  | `EXC`            | Get random Phil's philosophy                                             |
 
 
-| Commands   | Command Type     | Description                            |
-| :--------  | :----------------| :--------------------------------------|
-| `.ping`    | `MOD`            | Pings the bot                          |
-| `.kick`    | `MOD`            | Kicks the mentioned user               |
-| `.ban`     | `MOD`            | Bans the mentioned user                |
-| `.av`      | `MOD`            | Shows pfp of the mentioned user        |
-| `.meme`    | `FUN`            | Random Meme                            |
-| `.quote`   | `FUN`            | Random Fight Club Quote                |
-| `.sarcasm` | `FUN`            | Random Chandler Bing sarcastic comment |
-| `.starwars`| `FUN`            | Random star wars quote                 |
 
-## 🎵 Music commands
+## Music commands 🎵
 | Commands              | Description                                      |
 | :---------------------| :------------------------------------------------|
 | `.play <name/URL>`    | Plays music in a voice channel                   |

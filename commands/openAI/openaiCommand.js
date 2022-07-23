@@ -24,4 +24,22 @@ const reply = async (question) => {
     return response.data.choices[0].text;
 }
 
-module.exports = reply;
+/**
+ * 
+ * @param {Object} msg - Message object
+ * @param {Array} args - Strings array with the command arguments
+ */
+module.exports.openAI = async (msg, args) => {
+  try {
+    if(args.length === 1) {
+      msg.channel.send("You need to provide a question to ask R2D2.");
+    } else {
+      args.shift();
+      question = args.join(" ");
+      const response = await reply(question);
+      msg.channel.send(response);
+    }
+  } catch (e) {
+    console.log(e);
+  }
+}
