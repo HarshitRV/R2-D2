@@ -1,9 +1,23 @@
 require("dotenv").config();
+
+/**
+ * Node module dependencies
+ */
 const { Client } = require("discord.js");
+
+/**
+ * Bot client
+ */
 const client = new Client();
 
-const randomPhilsosophy = require("./commands/fun/philsosophy");
+/**
+ * Bot prefix
+ */
+const prefix = ".";
 
+/**
+ * Express server to keep the bot alive
+ */
 const keepAlive = require("./server")
 
 /**
@@ -27,11 +41,9 @@ const { getSarcasticComment } = require("./commands/fun/getSarcasticComment");
 const { getRandomKanyeQuote } = require("./commands/fun/getRandomKanyeQuote");
 const { getFightClubQuote } = require("./commands/fun/getFightClubQuote");
 const { openAI } = require("./commands/openAI/openaiCommand");
+const randomPhilsosophy = require("./commands/fun/philsosophy");
 
-
-
-const prefix = ",";
-
+// Client events.
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}`);
 });
