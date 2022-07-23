@@ -13,7 +13,12 @@ Music functionality is made possible using
 
 ## Prefix  :   `.`
 
-## List of Commands
+## New Commands ✨
+| Commands         | Command Type     | Description                                                              |
+| :----------------| :----------------| :------------------------------------------------------------------------|
+| `.r2d2`          | `FUN`            | Ask r2d2 anything (powered by[OpenAI](https://beta.openai.com/overview)  |
+| `.philosophy`    | `FUN`            | Get random Phil Dunphy's philosophy                                      |
+## List of Commands 📁
 
 
 | Commands   | Command Type     | Description                            |

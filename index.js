@@ -1,9 +1,11 @@
 require("dotenv").config();
 const { Client, MessageEmbed } = require("discord.js");
+const reply = require("./openaiCommand");
 const client = new Client();
 const starwars = require("starwars");
+const randomPhilsosophy = require("./philsosophy");
 const https = require("https");
-const keepAlive = require("./server");
+const keepAlive = require("./server")
 const prefix = ".";
 
 client.on("ready", () => {
@@ -103,22 +105,7 @@ client.on("message", (msg) => {
       });
     });
   }
-  //joke
-  // if (msg.content.startsWith(`${prefix}joke`)) {
-  //   const url = "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit"
-  //   https.get(url, (res) => {
-  //     res.on("data", (data) => {
-  //       const joke = JSON.parse(data)
-  //       //console.log(joke);
-  //       const embed = new MessageEmbed()
-  //         .setDescription(`**${joke.setup}**\n\n${joke.delivery}`)
-  //         .setColor(0x0949EE)
-  //         .setTimestamp()
-  //         .setFooter('Requested by ' + msg.author.username, msg.author.displayAvatarURL())
-  //       msg.channel.send(embed);
-  //     })
-  //   })
-  // }
+
   //CHANDLER BING SARCASTIC COMMENTS
   if (msg.content.startsWith(`${prefix}sarcasm`)) {
     const url = "https://sarcasm-api.herokuapp.com/";
@@ -167,6 +154,7 @@ client.on("message", (msg) => {
       });
     });
   }
+  
   //Print message
   if (msg.content.startsWith(`${prefix}print`)) {
     //  prefix =  args[0];
@@ -177,6 +165,25 @@ client.on("message", (msg) => {
     msg.channel.send(to_send);
   }
 
+  // OPENAI ASK R2D2
+  if(msg.content.startsWith(`${prefix}R2D2`) || msg.content.startsWith(`${prefix}r2d2`)) {
+    args.shift();
+    question = args.join(" ");
+    reply(question)
+      .then(res=> msg.channel.send(res));
+  }
+
+  // Phil's philosophy
+  if(msg.content.startsWith(`${prefix}philosophy`)) {
+    const embed = new MessageEmbed()
+      .setAuthor('Phil Dunphy', "https://i.imgur.com/yMdrap8.jpeg")
+      .setDescription(randomPhilsosophy())
+      .setColor(0x0949ee)
+      .setTimestamp();
+
+     msg.channel.send(embed);
+  }
+  
   //General HELP
   if (msg.content.startsWith(`${prefix}help`)) {
     const embed = new MessageEmbed()
@@ -189,13 +196,18 @@ client.on("message", (msg) => {
           value: `Opens the music panel to play music.`,
         },
         {
-          name: `❛❜ ${prefix}starwars`,
-          value: `Generates random starwars quote`,
+          name: `🤖 ${prefix}r2d2 <Your question>`,
+          value: `Ask me anything. (Powered by OpenAI)`,
         },
+        { name: `❛❜ ${prefix}starwars`, value: `Generates random starwars quote` },
         { name: `😹 ${prefix}meme`, value: `Generates random meme` },
         {
           name: `😏 ${prefix}sarcasm`,
           value: `Get random Chandler Bing quotes(exclusive command)`,
+        },
+        {
+          name: `🧐 ${prefix}philosophy`,
+          value: `Get random Phil Dunphy's philosophy`
         },
         {
           name: `☠️ ${prefix}quote`,
