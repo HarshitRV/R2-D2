@@ -8,8 +8,8 @@
     "devstart": "env-cmd -f ./dev.env node index.js"
   },
   "engines": {
-    "npm": ">=7.0.0",
-    "node": ">=16.0.0"
+    "npm": ">=8.5.5",
+    "node": ">=v16.15.0"
   },
   "keywords": [],
   "author": "",
