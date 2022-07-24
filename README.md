@@ -1,13 +1,13 @@
 # R2-D2 DISCORD BOT                         
 <img src="https://i.imgur.com/7Mb8CAT.png" style="text-align: center;">
 
-##  This is a simple discord bot with music functionality made using [discord.js](https://discord.js.org/#/) .
-#
+##  A starwars themed discord bot made with [discord.js](https://discord.js.org/#/) .
 
 # Description
 The star wars themed Discord bot/Music Bot.
 Music functionality is made possible using
 [ZerioDev](https://github.com/ZerioDev) github [repository](https://github.com/ZerioDev/Music-bot) 
+### [Invite 📩](https://discord.com/api/oauth2/authorize?client_id=854977056022331423&permissions=8&scope=bot)   | [Upvote ⬆️](https://top.gg/bot/854977056022331423/vote)
 
 ## Bot Commands
 
@@ -59,7 +59,4 @@ Music functionality is made possible using
 | `.filter-list`        | See filters                                      |
 
 
-## Invite the live version of the bot
-# [Click to Invite](https://discord.com/api/oauth2/authorize?client_id=854977056022331423&permissions=8&scope=bot)
-
-# [Upvote](https://top.gg/bot/854977056022331423/vote)
+# [Contributing](docs/contributing/contributing.md)

@@ -1,5 +1,3 @@
-require("dotenv").config();
-
 /**
  * Node module dependencies
  */
@@ -13,7 +11,7 @@ const client = new Client();
 /**
  * Bot prefix
  */
-const prefix = ".";
+const prefix = process.env.PREFIX;
 
 /**
  * Express server to keep the bot alive

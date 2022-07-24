@@ -49,7 +49,7 @@ module.exports.help = (msg, prefix) => {
                 },
                 {
                     name: `\u200b`,
-                    value: `**[Invite Me](https://discord.com/oauth2/authorize?client_id=854977056022331423&permissions=8&scope=bot)**`,
+                    value: `**[Invite Me 🔗](https://discord.com/oauth2/authorize?client_id=854977056022331423&permissions=8&scope=bot)**`,
                     inline: true,
                 },
                 {
@@ -59,7 +59,12 @@ module.exports.help = (msg, prefix) => {
                 },
                 {
                     name: `\u200b`,
-                    value: `**[Support](https://discord.com/invite/9qtAg79ahW)**`,
+                    value: `**[Donate ☕️](https://ko-fi.com/harshitrv)**`,
+                    inline: true,
+                },
+                {
+                    name: `\u200b`,
+                    value: `**[Support 🚀](https://discord.com/invite/9qtAg79ahW)**`,
                     inline: true,
                 }
             )
@@ -159,6 +164,11 @@ module.exports.musicHelp = (msg, prefix) => {
                 },
                 {
                     name: `\u200b`,
+                    value: `**[Donate ☕️](https://ko-fi.com/harshitrv)**`,
+                    inline: true,
+                },
+                {
+                    name: `\u200b`,
                     value: `**Credits:** **[ZerioDev](https://github.com/ZerioDev)**`,
                     inline: true,
                 }
@@ -201,6 +211,11 @@ module.exports.filterHelp = (msg, prefix) => {
                 {
                     name: `\u200b`,
                     value: `**[Vote Me 😘](https://top.gg/bot/854977056022331423/vote)**`,
+                },
+                {
+                    name: `\u200b`,
+                    value: `**[Donate ☕️](https://ko-fi.com/harshitrv)**`,
+                    inline: true,
                 },
                 {
                     name: `\u200b`,
