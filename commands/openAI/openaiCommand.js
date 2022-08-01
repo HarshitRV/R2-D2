@@ -41,5 +41,7 @@ module.exports.openAI = async (msg, args) => {
     }
   } catch (e) {
     console.log(e);
+    msg.channel.send("Too many requests. Please try again later or contact support.");
+    msg.channel.send("discord.gg/9qtAg79ahW")
   }
 }
