@@ -1,11 +1,11 @@
-const { MessageEmbed } = require("discord.js");
-const https = require("https");
+import { MessageEmbed } from "discord.js";
+import https from "https";
 
 /**
  * @description - Gets a random meme.
  * @param {Object} msg - Message object
  */
-module.exports.showMeme = (msg) => {
+export const showMeme = (msg) => {
     try {
         const url = "https://meme-api.herokuapp.com/gimme";
         https.get(url, (res) => {

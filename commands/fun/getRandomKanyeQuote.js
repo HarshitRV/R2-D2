@@ -1,11 +1,11 @@
-const { MessageEmbed } = require("discord.js");
-const https = require("https");
+import { MessageEmbed } from "discord.js";
+import https from "https";
 
 /**
  * @description - Get a random kanye quote.
  * @param {Object} msg - Message object
  */
-module.exports.getRandomKanyeQuote = (msg) => {
+export const getRandomKanyeQuote = (msg) => {
     try {
         const url = "https://api.kanye.rest/";
         https.get(url, (res) => {

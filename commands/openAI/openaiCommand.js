@@ -1,4 +1,4 @@
-const { Configuration, OpenAIApi } = require("openai");
+import { Configuration, OpenAIApi } from "openai";
 
 const configuration = new Configuration({
   apiKey: process.env['OPENAI_API_KEY'],
@@ -29,7 +29,7 @@ const reply = async (question) => {
  * @param {Object} msg - Message object
  * @param {Array} args - Strings array with the command arguments
  */
-module.exports.openAI = async (msg, args) => {
+export const openAI = async (msg, args) => {
   try {
     if(args.length === 1) {
       msg.channel.send("You need to provide a question to ask R2D2.");

@@ -2,6 +2,7 @@
   "name": "r2d2-discord-bot",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -18,7 +19,9 @@
   "dependencies": {
     "discord.js": "^12.5.3",
     "express": "^4.17.1",
+    "node-fetch": "^3.2.10",
     "openai": "^3.0.0",
+    "request": "^2.88.2",
     "starwars": "^1.0.1"
   },
   "devDependencies": {

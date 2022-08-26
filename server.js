@@ -1,4 +1,4 @@
-const express = require("express")
+import express from "express"
 
 const server = express()
 
@@ -11,10 +11,8 @@ server.all("/", (req, res) => {
   })
 })
 
-function keepAlive() {
+export const keepAlive = () => {
   server.listen(PORT, () => {
     console.log("R2-D2 is online")
   })
 }
-
-module.exports = keepAlive

@@ -1,10 +1,10 @@
-const { MessageEmbed } = require("discord.js");
+import { MessageEmbed } from "discord.js";
 
 /**
  * @description - Displays users avatar.
  * @param {Object} msg - Message object
  */
-module.exports.showAvatar = (msg) => {
+export const showAvatar = (msg) => {
     try {
         const avatar = msg.author.displayAvatarURL();
         const embed = new MessageEmbed()
