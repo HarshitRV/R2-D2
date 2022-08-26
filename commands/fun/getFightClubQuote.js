@@ -1,12 +1,12 @@
-const { MessageEmbed } = require("discord.js");
-const https = require("https");
+import { MessageEmbed } from "discord.js";
+import https from "https";
 
 /**
  * @description - Get a random fightclub quote.
  * @param {Object} msg - Message object
  */
 
-module.exports.getFightClubQuote = (msg) => {
+export const getFightClubQuote = (msg) => {
     try {
         const url = "https://fightclub-api.herokuapp.com/FightClub";
 

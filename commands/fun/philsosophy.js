@@ -17,8 +17,6 @@ const philsosophy = [
  * @param {Array} philsosophy 
  * @returns {String} - A random Phil's philosophy
  */
-const randomPhilsosophy = (arr = philsosophy) => {
+export const randomPhilsosophy = (arr = philsosophy) => {
     return arr[Math.trunc((Math.random() * arr.length ))]
 }
-
-module.exports = randomPhilsosophy;

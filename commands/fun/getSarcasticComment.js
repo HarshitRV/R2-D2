@@ -1,11 +1,11 @@
-const { MessageEmbed } = require("discord.js");
-const https = require("https");
+import { MessageEmbed } from "discord.js";
+import https from "https";
 
 /**
  * @description - Get a random chandler bing sarcastic comment.
  * @param {Object} msg - Message object
  */
-module.exports.getSarcasticComment = (msg) => {
+export const getSarcasticComment = (msg) => {
   try {
     const url = "https://sarcasm-api.herokuapp.com/";
     https.get(url, (res) => {

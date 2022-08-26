@@ -1,11 +1,11 @@
-const { MessageEmbed } = require("discord.js");
-const starwars = require("starwars");
+import { MessageEmbed } from "discord.js";
+import starwars from "starwars";
 
 /**
  * @description - Starwars command.
  * @param {Object} msg - Message object
  */
-module.exports.getStarwarsQuote = (msg) => {
+export const getStarwarsQuote = (msg) => {
     try {
         const embed = new MessageEmbed()
         .setColor(0x0949ee)

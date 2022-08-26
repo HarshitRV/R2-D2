@@ -1,7 +1,7 @@
 /**
  * Node module dependencies
  */
-const { Client } = require("discord.js");
+import { Client } from "discord.js";
 
 /**
  * Bot client
@@ -16,30 +16,30 @@ const prefix = process.env.PREFIX;
 /**
  * Express server to keep the bot alive
  */
-const keepAlive = require("./server")
+import { keepAlive } from "./server.js";
 
 /**
  * Commands imports.
  */
 // Help commands.
-const { 
+import { 
   help,
   musicHelp,
   filterHelp 
-} = require("./commands/core/help");
+} from "./commands/core/help.js";
 
 // Fun commands.
-const { getStarwarsQuote } = require("./commands/fun/getStarwarsQuote");
-const { showAvatar } = require("./commands/fun/showAvatar");
-const { showMeme } = require("./commands/fun/showMeme");
-const { print } = require("./commands/fun/print");
+import { getStarwarsQuote } from "./commands/fun/getStarwarsQuote.js";
+import { showAvatar } from "./commands/fun/showAvatar.js";
+import { showMeme } from "./commands/fun/showMeme.js";
+import { print } from "./commands/fun/print.js";
 
 // Exclusive commands.
-const { getSarcasticComment } = require("./commands/fun/getSarcasticComment");
-const { getRandomKanyeQuote } = require("./commands/fun/getRandomKanyeQuote");
-const { getFightClubQuote } = require("./commands/fun/getFightClubQuote");
-const { openAI } = require("./commands/openAI/openaiCommand");
-const randomPhilsosophy = require("./commands/fun/philsosophy");
+import { getSarcasticComment } from "./commands/fun/getSarcasticComment.js";
+import { getRandomKanyeQuote }from "./commands/fun/getRandomKanyeQuote.js";
+import { getFightClubQuote } from "./commands/fun/getFightClubQuote.js";
+import { openAI } from "./commands/openAI/openaiCommand.js";
+import { randomPhilsosophy } from "./commands/fun/philsosophy.js";
 
 // Client events.
 client.on("ready", () => {

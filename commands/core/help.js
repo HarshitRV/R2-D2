@@ -1,11 +1,23 @@
-const { MessageEmbed } = require("discord.js");
+/**
+ * Node Modules
+ */
+import { MessageEmbed } from "discord.js";
+
+/**
+ * Utils imports
+ */
+import { getMonitorStatus } from "../../utils/uptimeRobot.js"
 
 /**
  * @description - Shows all bot commands.
  * @param {Object} msg - Message object
  */
-module.exports.help = (msg, prefix) => {
+export const help = async (msg, prefix) => {
     try {
+        const monitorStatus = await getMonitorStatus(process.env.UPTIME_API_KEY, "R2-D2 Music-Bot-Copy", "R2-D2 Music Bot");
+
+        const musicValue = monitorStatus.status === 2 ? "🟢 Currently Online" : "🔴 Currently Down";
+
         const embed = new MessageEmbed()
             .setAuthor("R2-D2™|Help", "https://i.imgur.com/7Mb8CAT.png")
             .setTitle("Hey there 👋. Help has arrived")
@@ -13,7 +25,7 @@ module.exports.help = (msg, prefix) => {
             .addFields(
                 {
                     name: `🎶 ${prefix}music`,
-                    value: `Opens the music panel to play music.`,
+                    value: `Opens the music panel to play music. ${musicValue}`,
                 },
                 {
                     name: `🤖 ${prefix}r2d2 <Your question>`,
@@ -81,11 +93,15 @@ module.exports.help = (msg, prefix) => {
  * @description - Shows all music commands.
  * @param {Object} msg - Message object
  */
-module.exports.musicHelp = (msg, prefix) => {
+export const musicHelp = async (msg, prefix) => {
     try {
+        const monitorStatus = await getMonitorStatus(process.env.UPTIME_API_KEY, "R2-D2 Music-Bot-Copy", "R2-D2 Music Bot");
+
+        const title = monitorStatus.status === 2 ? "🟢 Online | Get in the groove 🎵 🎵" : "🔴 Offline | Music service is down";
+
         const embed = new MessageEmbed()
             .setAuthor("R2-D2™|Music Panel", "https://i.imgur.com/7Mb8CAT.png")
-            .setTitle("Get in the groove 🎵 🎵")
+            .setTitle(title)
             .setDescription(`**Prefix:**  \`${prefix}\`\n\n**Music Commands**`)
             .addFields(
                 {
@@ -190,7 +206,7 @@ module.exports.musicHelp = (msg, prefix) => {
  * @param {Object} msg - Message object
  * @param {String} prefix - The bot prefix
  */
-module.exports.filterHelp = (msg, prefix) => {
+export const filterHelp = (msg, prefix) => {
     try {
         const embed = new MessageEmbed()
             .setAuthor("R2-D2™|Filter", "https://i.imgur.com/7Mb8CAT.png")
