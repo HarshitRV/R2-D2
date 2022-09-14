@@ -1,5 +1,6 @@
-# R2-D2 DISCORD BOT                         
+# R2-D2 DISCORD BOT                       
 <img src="https://i.imgur.com/7Mb8CAT.png" style="text-align: center;">
+<div><img src="https://img.shields.io/discord/808991875934847026"></div>
 
 ##  A starwars themed discord bot made with [discord.js](https://discord.js.org/#/) .
 

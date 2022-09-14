@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node index.js",
     "devstart": "env-cmd -f ./dev.env node index.js",
-    "prodstart": "env-cmd -f ./prod.env node index.js"
+    "prodstart": "env-cmd -f ./prod.env node index.js",
+    "tstart": "env-cmd -f ./test.env node index.js"
   },
   "engines": {
     "npm": ">=8.5.5",
