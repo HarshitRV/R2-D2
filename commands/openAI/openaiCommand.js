@@ -9,18 +9,20 @@ const openai = new OpenAIApi(configuration);
 
 const options = (question) => {
   return {
-    model: "text-davinci-002",
-    prompt: question,
-    temperature: 0.6,
-    max_tokens: 150,
+    model: "text-ada-001",
+    prompt: `Human: ${question}`,
+    temperature: 0.9,
+    max_tokens: 100,
     top_p: 1,
-    frequency_penalty: 1,
-    presence_penalty: 1,
+    frequency_penalty: 0,
+    presence_penalty: 0.6,
+    stop: [" Human:", " AI:"],
   }
 }
 
 const reply = async (question) => {
     const response  =  await openai.createCompletion(options(question));
+    console.log(response.data.choices)
     return response.data.choices[0].text;
 }
 
@@ -31,11 +33,13 @@ const reply = async (question) => {
  */
 export const openAI = async (msg, args) => {
   try {
+    console.log(args);
     if(args.length === 1) {
       msg.channel.send("You need to provide a question to ask R2D2.");
     } else {
       args.shift();
-      question = args.join(" ");
+      const question = args.join(" ");
+      console.log(question);
       const response = await reply(question);
       msg.channel.send(response);
     }
