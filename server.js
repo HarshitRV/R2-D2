@@ -14,7 +14,7 @@ server.all("/", (req, res) => {
 server.get("/alive", (req, res)=> {
   return res.status(200).send({
     status: 200,
-    message: "Server is running."
+    message: "Bot is running."
   });
 });
 
