@@ -44,8 +44,8 @@ export const help = async (msg, prefix) => {
                     value: `Get random Chandler Bing quotes(exclusive command)`,
                 },
                 {
-                    name: `🧐 ${prefix}philosophy`,
-                    value: `Get random Phil Dunphy's philosophy`
+                    name: `🧐 ${prefix}phil`,
+                    value: `Get random Phil Dunphy's philosophy of life.`
                 },
                 {
                     name: `☠️ ${prefix}quote`,

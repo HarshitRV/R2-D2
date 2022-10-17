@@ -66,7 +66,7 @@ client.on("message", (msg) => {
 
       // Exclusive commands
       case `${prefix}sarcasm`: getSarcasticComment(msg); break;
-      case `${prefix}philosophy`: randomPhilsosophy(msg); break;
+      case `${prefix}phil`: randomPhilsosophy(msg); break;
       case `${prefix}fightclub`: getFightClubQuote(msg); break;
       case `${prefix}r2d2`: openAI(msg, args); break;
 
