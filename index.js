@@ -39,7 +39,7 @@ import { getSarcasticComment } from "./commands/fun/getSarcasticComment.js";
 import { getRandomKanyeQuote }from "./commands/fun/getRandomKanyeQuote.js";
 import { getFightClubQuote } from "./commands/fun/getFightClubQuote.js";
 import { openAI } from "./commands/openAI/openaiCommand.js";
-import { randomPhilsosophy } from "./commands/fun/philsosophy.js";
+import { randomPhilsosophy, philsosophy } from "./commands/fun/philsosophy.js";
 
 // Client events.
 client.on("ready", () => {
@@ -50,6 +50,7 @@ client.on("message", (msg) => {
   try {
     if (!msg.guild) return;
     const args = msg.content.slice(prefix.length).trim().split(" ");
+    console.log(msg.content, args);
 
     switch (`${prefix}${args[0].toLowerCase()}`) {
       // Help commands
@@ -66,7 +67,7 @@ client.on("message", (msg) => {
 
       // Exclusive commands
       case `${prefix}sarcasm`: getSarcasticComment(msg); break;
-      case `${prefix}phil`: randomPhilsosophy(msg); break;
+      case `${prefix}phil`: randomPhilsosophy(msg, philsosophy); break;
       case `${prefix}fightclub`: getFightClubQuote(msg); break;
       case `${prefix}r2d2`: openAI(msg, args); break;
 
