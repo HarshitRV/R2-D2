@@ -1,5 +1,3 @@
-import fetch from "node-fetch";
-
 /**
  * @description - Gets the status of a monitor
  * 
