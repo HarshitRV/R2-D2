@@ -11,8 +11,8 @@
     "tstart": "env-cmd -f ./test.env node index.js"
   },
   "engines": {
-    "npm": ">=8.5.5",
-    "node": ">=v16.15.0"
+    "npm": ">=9.4.2",
+    "node": ">=v18.12.1"
   },
   "keywords": [],
   "author": "",
