@@ -20,6 +20,13 @@ const options = (question) => {
   }
 }
 
+//* Will continue from here
+const gpt4Options = (question) => {
+  return {
+    model: "gpt-4"
+  }
+}
+
 const reply = async (question) => {
     const response  =  await openai.createCompletion(options(question));
     console.log(response.data.choices)

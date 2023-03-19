@@ -49,30 +49,39 @@ client.on("ready", () => {
 client.on("message", (msg) => {
   try {
     if (!msg.guild) return;
-    const args = msg.content.slice(prefix.length).trim().split(" ");
-    console.log(msg.content, args);
 
-    switch (`${prefix}${args[0].toLowerCase()}`) {
+    const commandPrefix = msg.content.split("")[0];
+    //! Should be removed from depoloyed version --------------------
+    const args = msg.content.slice(prefix.length).trim().split(" ");
+    console.log(commandPrefix, prefix);
+    console.log(msg.content, args);
+    //! -------------------------------------------------------------
+
+   
+    if (commandPrefix !== prefix) return;
+    console.log("Command detected");
+
+    switch (`${args[0].toLowerCase()}`) {
       // Help commands
-      case `${prefix}help`: help(msg, prefix); break;
-      case `${prefix}music`: musicHelp(msg, prefix); break;
-      case `${prefix}filter-list`: filterHelp(msg, prefix); break;
+      case `help`: help(msg, prefix); break;
+      case `music`: musicHelp(msg, prefix); break;
+      case `filter-list`: filterHelp(msg, prefix); break;
 
       // Fun commands
-      case `${prefix}ping`: msg.channel.send(`Pong! ${client.ws.ping}ms`); break;
-      case `${prefix}starwars`: getStarwarsQuote(msg); break;
-      case `${prefix}av`: showAvatar(msg); break;
-      case `${prefix}meme`: showMeme(msg); break;
-      case `${prefix}kanye`: getRandomKanyeQuote(msg); break;
+      case `ping`: msg.channel.send(`Pong! ${client.ws.ping}ms`); break;
+      case `starwars`: getStarwarsQuote(msg); break;
+      case `av`: showAvatar(msg); break;
+      case `meme`: showMeme(msg); break;
+      case `kanye`: getRandomKanyeQuote(msg); break;
 
       // Exclusive commands
-      case `${prefix}sarcasm`: getSarcasticComment(msg); break;
-      case `${prefix}phil`: randomPhilsosophy(msg, philsosophy); break;
-      case `${prefix}fightclub`: getFightClubQuote(msg); break;
-      case `${prefix}r2d2`: openAI(msg, args); break;
+      case `sarcasm`: getSarcasticComment(msg); break;
+      case `phil`: randomPhilsosophy(msg, philsosophy); break;
+      case `fightclub`: getFightClubQuote(msg); break;
+      case `r2d2`: openAI(msg, args); break;
 
       // Print commands
-      case `${prefix}print`: print(msg, args); break;
+      case `print`: print(msg, args); break;
       default: break;
     }
 
