@@ -26,7 +26,6 @@ export const chatGPTCompletion = async (msg, args) => {
 			return;
 		} else {
 			console.log(msg.author);
-            return
 			const messages = [
 				{ role: "system", content: "You are a helpful assistant." },
 				{ role: "user", content: question },
