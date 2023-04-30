@@ -18,6 +18,7 @@ export const chatGPTCompletion = async (msg, args) => {
 
 		if (msg.author.id !== process.env.OWNER_ID) {
 			msg.channel.send("You are not allowed to use this command.");
+			console.log("Unauthorized user tried to use chatGPT", msg.author)
 			return;
 		}
 
